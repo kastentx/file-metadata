@@ -14,7 +14,7 @@ app.get( '/', function( req, res ) {
 app.post( '/upload', upload.single('targetFile'),  function ( req, res ) {
     
     // do something with image
-    res.json( { 'size' : req.file.size } )
+    res.json( { 'size' : req.file.size + ' bytes'} )
 } )
 
 app.listen( process.env.PORT, function( port ) {
